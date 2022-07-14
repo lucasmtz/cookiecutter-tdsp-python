@@ -75,8 +75,7 @@ repos:
   rev: v0.961
   hooks:
   - id: mypy
-    args: [--install-types, --non-interactive, --explicit-package-bases, --namespace-packages]
-    exclude: setup.py
+    args: [--install-types, --non-interactive, --explicit-package-bases, --namespace-packages, --ignore-missing-imports]
 
 - repo: https://github.com/myint/docformatter
   rev: v1.3.1
