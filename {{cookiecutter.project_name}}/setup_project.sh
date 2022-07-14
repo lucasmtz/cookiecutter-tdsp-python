@@ -31,7 +31,7 @@ if ! git status &>/dev/null; then
     echo -e "\nInitializing new git repository..."
     git init -b main
     git add .
-    git commit -m "Create {{cookiecutter.project_name}} tdsp template repository"
+    git commit -m "Create initial repository"
     echo -e "\nInitializing git flow..."
     git flow init -d -t 'v'
 fi
@@ -66,6 +66,7 @@ pre-commit run --all-files
 git add .
 pre-commit run --all-files
 git add .
+git commit -m "Create {{cookiecutter.project_name}} tdsp template"
 
 # -----------------------------------------------------------------------------------------------------------------
 # Check versioneer
