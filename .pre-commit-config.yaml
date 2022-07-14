@@ -65,7 +65,7 @@ repos:
   rev: v2.37.1
   hooks:
   - id: pyupgrade
-    args: [--py38-plus]
+    args: [--py39-plus]
 
 - repo: https://github.com/asottile/setup-cfg-fmt
   rev: v1.20.1
@@ -76,5 +76,10 @@ repos:
   rev: v0.961
   hooks:
   - id: mypy
-    args: [--no-strict-optional, --ignore-missing-imports]
-    additional_dependencies: [types-PyYAML] # if any missing type error add to this list
+    args: [--ignore-missing-imports, --install-types, --non-interactive, --explicit-package-bases, --namespace-packages]
+
+- repo: https://github.com/myint/docformatter
+  rev: v1.3.1
+  hooks:
+  - id: docformatter
+    args: [--in-place, --wrap-summaries=120, --wrap-descriptions=112, --blank]
