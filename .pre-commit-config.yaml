@@ -41,14 +41,13 @@ repos:
   rev: 3.9.2
   hooks:
   - id: flake8
-    args: [--max-line-length=120, '--ignore=E203,W503', '--per-file-ignores=__init__.py:F401,F403']
+    args: [--max-line-length=120, '--ignore=E203,W503']
 
 - repo: https://github.com/PyCQA/isort
   rev: 5.10.1
   hooks:
   - id: isort
     args: [--profile, black, --filter-files, --line-length=120]
-    exclude: setup.py
 
 - repo: https://github.com/bemeurer/beautysh
   rev: v6.2.1
@@ -76,7 +75,8 @@ repos:
   rev: v0.961
   hooks:
   - id: mypy
-    args: [--ignore-missing-imports, --install-types, --non-interactive, --explicit-package-bases, --namespace-packages]
+    args: [--explicit-package-bases, --namespace-packages]
+    exclude: setup.py
 
 - repo: https://github.com/myint/docformatter
   rev: v1.3.1
