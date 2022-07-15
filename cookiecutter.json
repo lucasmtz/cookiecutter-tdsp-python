@@ -1,7 +1,7 @@
 {
+  "project_name": "Placeholder Data-Science-Project",
   "__package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
   "customer_name": "Placeholder Customer-Name",
-  "project_name": "Placeholder Data-Science-Project",
   "setup_project": [
     "Yes",
     "No"
