@@ -82,7 +82,7 @@ repos:
   rev: 1.7.4
   hooks:
   - id: bandit
-    exclude: _version.py, versioneer.py
+    exclude: _version.py,versioneer.py
 
 
 - repo: https://github.com/pre-commit/mirrors-mypy
