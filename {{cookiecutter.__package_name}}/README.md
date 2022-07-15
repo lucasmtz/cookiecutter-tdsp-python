@@ -35,7 +35,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 After running the cookiecutter post generation hook or the setup_project.sh script the initial project will have the following structure:
 
 ```
-{{cookiecutter.project_name}}
+{{cookiecutter.__package_name}}
 ├─ .gitattributes
 ├─ .gitignore
 ├─ .pre-commit-config.yaml
