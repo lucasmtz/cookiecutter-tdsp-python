@@ -39,8 +39,7 @@ fi
 # -----------------------------------------------------------------------------------------------------------------
 # Install versioneer
 # -----------------------------------------------------------------------------------------------------------------
-echo
-echo "Installing versioneer..."
+echo -e "\nInstalling versioneer..."
 pip3 install versioneer
 if ! test -f "versioneer.py"; then
     echo -e "\nFinishing versioneer installation..."
@@ -54,24 +53,16 @@ echo -e "\nInstalling project in editable mode..."
 pip3 install -e ".[dev]"
 
 # -----------------------------------------------------------------------------------------------------------------
-# Run pre-commit hooks
+# Install pre-commit
 # -----------------------------------------------------------------------------------------------------------------
-echo -e "\nRunning pre-commit hooks..."
+echo -e "\nInstalling pre-commit..."
 pre-commit install
 pre-commit autoupdate
-git add .
-pre-commit run --all-files
-git add .
-pre-commit run --all-files
-git add .
-pre-commit run --all-files
-git add .
-git commit -m "Create {{cookiecutter.project_name}} tdsp template"
 
 # -----------------------------------------------------------------------------------------------------------------
 # Check versioneer
 # -----------------------------------------------------------------------------------------------------------------
-echo
+echo -e "\nChecking versioneer..."
 python setup.py version
 
 # -----------------------------------------------------------------------------------------------------------------
