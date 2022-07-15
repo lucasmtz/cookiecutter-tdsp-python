@@ -68,4 +68,4 @@ python setup.py version
 # -----------------------------------------------------------------------------------------------------------------
 # Success message
 # -----------------------------------------------------------------------------------------------------------------
-echo -e "\nSUCCESS! {{cookiecutter.project_name}} is ready to use."
+echo -e "\nSUCCESS! {{cookiecutter.project_name}}[{{cookiecutter.__package_name}}] is ready to use."

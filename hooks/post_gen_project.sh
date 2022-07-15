@@ -1,4 +1,6 @@
 #!/bin/bash
+echo
+echo $(ls)
 if [[ {{cookiecutter.setup_project}} == "Yes" ]]; then
     echo -e "\nRunning post_gen_project.sh..."
     sed -i 's/# .vscode/\.vscode/g' .gitignore
@@ -22,4 +24,4 @@ git add .
 pre-commit run --all-files
 git add .
 git commit -m "Create {{cookiecutter.__package_name}} tdsp template"
-echo -e "\n{{cookiecutter.project_name}} TDSP project template created. Happy coding!"
+echo -e "\n{{cookiecutter.project_name}}[{{cookiecutter.__package_name}}] TDSP project template created. Happy coding!"
